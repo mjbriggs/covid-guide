@@ -2,25 +2,17 @@
    <nb-container>
     <nb-header>
       <nb-left>
-        <nb-button transparent>
+        <!-- <nb-button transparent>
           <nb-icon name="arrow-back" />
-        </nb-button>
+          <nb-text>Back</nb-text>
+        </nb-button> -->
       </nb-left>
       <nb-body>
-        <nb-title>Header</nb-title>
+        <nb-title>COVID-Guide</nb-title>
       </nb-body>
-      <nb-right>
-        <nb-button transparent>
-          <nb-icon name="menu" />
-        </nb-button>
-      </nb-right>
+      <nb-right/>
     </nb-header>
-    <todo-item
-      class="text-container"
-      v-for="todo in todos"
-      :key="todo.text"
-      :item="todo"
-    />
+    <Form/>
   </nb-container>
   
 </template>
@@ -34,10 +26,12 @@ import { VueNativeBase } from "native-base";
 Vue.use(VueNativeBase);
 
 import TodoItem from './components/TodoItem';
+import Form from './components/Form';
 export default {
   name: 'App',
   components: {
     TodoItem, 
+    Form
   },
   data: function() {
     return {
